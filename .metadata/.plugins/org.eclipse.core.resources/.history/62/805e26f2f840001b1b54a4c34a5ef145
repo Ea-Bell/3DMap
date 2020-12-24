@@ -1,0 +1,53 @@
+**
+ * 
+ * 
+ * 데이터 컨트롤 할시 row[i][변수]식으로 데이터 컨트롤 하시오.
+ * 변수명
+ * Time            일시분
+ * Speed           속도
+ * Rpm             분당회전수
+ * Latitude        위도
+ * Longitude       경도
+ * Azimuth         방위각
+ * XAcceleration   X가속도
+ * YAcceleration   Y가속도
+ * 
+ * rows            json형 (0이 기준)
+ * 
+ * 함수
+ * readExcel()    엑셀 파일 읽기
+ */
+
+let rows;
+function readExcel() {
+			let input = event.target;
+			let reader = new FileReader();
+		
+			
+			reader.onload = function () {
+				let data =reader.result;
+				let workBook = XLSX.read(data, {type: 'binary'});
+				
+				workBook.SheetNames.forEach(function (sheetName) {
+					console.log('SheetName:' + sheetName);					
+					rows= XLSX.utils.sheet_to_json(workBook.Sheets[sheetName]);
+
+					return Exceldata(rows);
+				})
+			};
+			reader.readAsBinaryString(input.files[0]);	
+			
+}
+ function Exceldata(data){
+	console.log(data[0]["Time"]);
+	console.log(data[0]["Speed"]);
+	console.log(data[0]["Rpm"]);
+	console.log(data[0]["Latitude"]);
+	console.log(data[0]["Longitude"]);
+	console.log(data[0]["Azimuth"]);
+	console.log(data[0]["XAcceleration"]);
+	console.log(data[0]["YAcceleration"]);
+	
+
+}
+

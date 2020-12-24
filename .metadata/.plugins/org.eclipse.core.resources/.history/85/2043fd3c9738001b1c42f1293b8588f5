@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>차량 주행 데이터 시각화 시키기</title>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1d0b0cf39992a15bd20a78962f4b44a4"></script>
+</head>
+<body>
+
+	<div id="Partitio1"style= " float: left; width: 53%" >
+	<div id="map" style="width: 1000px; height: 300px;">
+	<script type="text/javascript" src="/Frontend/script/KakaoMapComponent.js"></script>
+	</div>
+	</div>
+	<div id="Partition2" style="background-color: background; float: left;">
+	dddddddrrrrrrrrrrrrrrrrrrrrrasdfasdfeeeesdfa
+	</div>
+</body>
+</html>
