@@ -41,10 +41,8 @@
 	
 	debugger
 	let Imgsrc= "/Frontend/img/airplane.png";
-	
-	
 	MultiMarker(Imgsrc, markerPosition);
-
+	
 	
 	
 	

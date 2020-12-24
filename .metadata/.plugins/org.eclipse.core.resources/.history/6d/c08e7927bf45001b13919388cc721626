@@ -4,7 +4,7 @@
  * Position: x값과 y값을 가지고 있는 marker주소.
  */
 
-var MultiMarker =  function (Imgsrc, Position){
+var MultiMarker = MultiMarker function(Imgsrc, Position){
 	for (var i = 0; i < 30; i ++) {
 		
 		 var imageSize = new kakao.maps.Size(24, 35);

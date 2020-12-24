@@ -16,7 +16,7 @@
 	
 	// 지도에 클릭 이벤트를 등록합니다
 	// 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
-	let markerPosition={};
+	var markerPosition={};
 	//엑셀의 Position을 대입 시키는 for문입니다.
 	for(let i=0;i<ExcelLenghs;i++){	
 		markerPosition[i]={
@@ -39,14 +39,12 @@
 	//지도에 표시된 마커 객체를 가지고 있을 배열입니다.
 	var markers=[];
 	
+	debugger
 	let Imgsrc= "/Frontend/img/airplane.png";
+	
+	
 	MultiMarker(Imgsrc, markerPosition);
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
