@@ -37,8 +37,14 @@ function readExcel() {
 				})				
 				//KakaoMapComponent와 연결된 함수 
 				//라이프타임과 스코프 생각할것.
+				let markerPosition={};
+				for(let i=0;i<rows.length;i++){	
+					markerPosition[i]={
+					Position: new kakao.maps.LatLng(rows[i]['Latitude'],rows[i]['Longitude'])
+						};
+				}
 				const kakaoMapcomponent = new KakaoMapcomponent();
-				kakao.ExcelMap();				
+				kakaoMapcomponent.ExcelMap(markerPosition);				
 			};
 			reader.readAsBinaryString(input.files[0]);			
 }

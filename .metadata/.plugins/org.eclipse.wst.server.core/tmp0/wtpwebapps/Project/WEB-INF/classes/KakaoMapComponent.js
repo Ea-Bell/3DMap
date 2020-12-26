@@ -18,23 +18,25 @@ var Start= function Component(){
 			center: new kakao.maps.LatLng(33.450701, 126.570667),
 			level: 3
 		};
+		
+		
 		 map = new kakao.maps.Map(container, options);	
+	
 	}
 	
-	ExcelMap(){
+	ExcelMap(markerPosition){
 		let ExcelLenghs= num; //이 변수가 필요한지에 대한 논의 후 결정하시오.
 		
-		// 지도에 클릭 이벤트를 등록합니다
-		// 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
 		
-		let markerPosition;		
-		for(let i = 0; i < ExcelLenghs; i++){		
-		 markerPosition[
-			{
-				latlng: new kakao.maps.LatLng(rows[i]['Latitude'], rows[i]['Longitude'])
-			}
-		];
-		}
+		
+		//라이프 사이프사이클에서 코드가 안먹히는거 같음.
+/*		let markerPosition={};	
+		
+		for(let i=0;i<ExcelLenghs;i++){	
+			markerPosition[i]={
+			Position: new kakao.maps.LatLng(rows[i]['Latitude'],rows[i]['Longitude'])
+				};
+		}*/
 		console.log(markerPosition);
 		
 /*		
