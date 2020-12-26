@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+class ClassName {
+	constructor(myState) {
+		this.myState=myState;
+	}
+	StartMap(){
+		
+	}
+	ExcelMap(){
+		
+	}
+}

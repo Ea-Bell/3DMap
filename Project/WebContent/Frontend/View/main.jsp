@@ -24,7 +24,12 @@
 		
 		</div>
 		<!-- 실행 함수 -->
-		<script type="text/javascript" src="/Frontend/script/KakaoMapComponent.js"></script>
+
+		<!-- <script type="module" src="/Frontend/script/KakaoMapComponent.js"></script> -->
+	<!--  	<script type="module" src="/Frontend/script/MultiMarker.js"></script>   -->
+	
+	<script type="text/javascript" src="/Frontend/script/KakaoMapComponent.js"></script>
+		
 	</div>
 		
 	<%--우측 영역 --%>
