@@ -31,18 +31,22 @@ function readExcel() {
 				workBook.SheetNames.forEach(function (sheetName) {
 					console.log('SheetName:' + sheetName);					
 					 rows= XLSX.utils.sheet_to_json(workBook.Sheets[sheetName]);
-				
-
 					//함수는 밑에다 작성하시오.
 					Exceldata(rows);
 					num=ExcelLenth(rows);					
 				})				
 				//KakaoMapComponent와 연결된 함수 
 				//라이프타임과 스코프 생각할것.
-				app();
+				let markerPosition={};
+				for(let i=0;i<rows.length;i++){	
+					markerPosition[i]={
+					Position: new kakao.maps.LatLng(rows[i]['Latitude'],rows[i]['Longitude'])
+						};
+				}
+				const kakaoMapcomponent = new KakaoMapcomponent();
+				kakaoMapcomponent.ExcelMap(markerPosition);				
 			};
-			reader.readAsBinaryString(input.files[0]);	
-		
+			reader.readAsBinaryString(input.files[0]);			
 }
 
 /**
