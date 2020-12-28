@@ -10,43 +10,21 @@ var Start= function Component(){
 }
 
  class KakaoMapcomponent {
+	 
 	constructor() {
 	}
 	StartMap(){
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			center: new kakao.maps.LatLng(38.21440383, 128.4376055),
 			level: 3
-		};
-		
-		
-		 map = new kakao.maps.Map(container, options);	
-	
+		};		
+		 map = new kakao.maps.Map(container, options);		
 	}
 	
 	ExcelMap(markerPosition){
 		let ExcelLenghs= num; //이 변수가 필요한지에 대한 논의 후 결정하시오.
-		
-		
-		
-		//라이프 사이프사이클에서 코드가 안먹히는거 같음.
-/*		let markerPosition={};	
-		
-		for(let i=0;i<ExcelLenghs;i++){	
-			markerPosition[i]={
-			Position: new kakao.maps.LatLng(rows[i]['Latitude'],rows[i]['Longitude'])
-				};
-		}*/
-		console.log(markerPosition);
-		
-/*		
-		//엑셀의 Position을 대입 시키는 for문입니다.
-		for(let i=0;i<ExcelLenghs;i++){	
-			markerPosition[i]={
-			Position: markerPosition[i].latlng
-				};
-			}	*/
-		
+						
 	/* 테스트용 코드
 	 * MakerPosition[][]
 		console.log(markerPosition[0]['Position']['La']);
@@ -58,29 +36,62 @@ var Start= function Component(){
 	*/	
 		/*클릭 리스너임
 		ClickListener();
-		*/
-		//지도에 표시된 마커 객체를 가지고 있을 배열입니다.	
-		
-		
+		*/		
 		debugger
-		let Imgsrc= "/Frontend/img/airplane.png";
+		let Imgsrc= $("#img").attr("src");
 			
+		console.log(Imgsrc);
 		const kakao = new KakaoMapcomponent();
+		
 		kakao.MultiMarker(Imgsrc, markerPosition);
 	}
 	
 	MultiMarker(Imgsrc, markerPosition){
-		
-		console.log('${Imgsrc}'+' ${markerPosition}');
-		
-/*		 var marker = new kakao.maps.Marker({
+		//마커 100개 표시
+		for(let i =0 ; i<100; i++){
+			let imageSize = new kakao.maps.Size(24, 35);
+			let markerImage= new kakao.maps.MarkerImage(Imgsrc, imageSize);			
+		 let marker = new kakao.maps.Marker({
 		        map: map, // 마커를 표시할 지도
-		        position: positions[i].latlng, // 마커를 표시할 위치
-		        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+		        position: markerPosition[i].latlng, // 마커를 표시할 위치	        
 		        image : markerImage // 마커 이미지 
-		    });*/
+		    });		 
+		}
 	}
 	
+	/**
+	 *         인수
+	 *          MyPosition: 현재 내 위치배열(x,y)값
+	 * DestinationPosition: 다음 지점 까지의배열 (x,y)값
+	 * 
+	 * 
+	 *  return: degree;
+	 */
+	getAngle (MyPosition, DestinationPosition) {
+		/**
+		 *	  변수목록
+		 *    px1: 내위치의x값
+		 *    px2: 다음 지점의 x값
+		 *    py1: 내위치의 y값
+		 *    py2: 다음 지점의 y값
+		 *    x  : px2-px1
+		 *    y  : py2-py2
+		 *      
+		 *    radian:     
+		 *    degree: 방향값
+		 **/
+		
+		const px1=0, py1=0;
+		 let px2=-2, py2=-2;
+		 const PI=Math.PI;
+		 	
+		 let x = px2-px1;
+		 let y = py2-py1;
+
+		 let radian = Math.atan2(y, x);
+		 let degree= radian*180/PI;
+		 return degree; 
+	}
 }
  //시작함수.
  Start();

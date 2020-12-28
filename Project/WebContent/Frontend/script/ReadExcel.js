@@ -40,7 +40,7 @@ function readExcel() {
 				let markerPosition={};
 				for(let i=0;i<rows.length;i++){	
 					markerPosition[i]={
-					Position: new kakao.maps.LatLng(rows[i]['Latitude'],rows[i]['Longitude'])
+					latlng: new kakao.maps.LatLng(rows[i]['Latitude'],rows[i]['Longitude'])
 						};
 				}
 				const kakaoMapcomponent = new KakaoMapcomponent();
