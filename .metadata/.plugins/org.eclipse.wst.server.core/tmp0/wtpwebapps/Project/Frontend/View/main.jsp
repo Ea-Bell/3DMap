@@ -44,7 +44,7 @@
 		</label>
 		<input type="text" id="Ytext" >
 	</div>
-
+<img id="img" src="/Frontend/img/airplane.png" style="display: none; transform:roated(90deg)">
 </div>
 </body>
 </html>
