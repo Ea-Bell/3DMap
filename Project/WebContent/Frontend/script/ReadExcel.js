@@ -51,9 +51,6 @@ function readExcel() {
 
 /**
  ** data             변수 rows를 받아 쓴다.
- *
- *
- *
  *함수
  *Exceldata(data)    데이타 변환용으로 쓰일예정
 **/

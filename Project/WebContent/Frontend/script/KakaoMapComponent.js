@@ -1,9 +1,8 @@
 /**
- * 
+ * 전역변수
+ * rows: 엑셀 컨트롤 변수 
  */
 var map; // 맵의 접근 가능;
-
-
 var Start= function Component(){
 	const kakaoMapcomponent = new KakaoMapcomponent();
 	kakaoMapcomponent.StartMap();	
@@ -60,12 +59,10 @@ var Start= function Component(){
 	}
 	
 	/**
-	 *         인수
-	 *          MyPosition: 현재 내 위치배열(x,y)값
+	 *Parameters:
+	 * MyPosition: 현재 내 위치배열(x,y)값
 	 * DestinationPosition: 다음 지점 까지의배열 (x,y)값
-	 * 
-	 * 
-	 *  return: degree;
+	 * return: Number;
 	 */
 	getAngle (MyPosition, DestinationPosition) {
 		/**
@@ -79,8 +76,7 @@ var Start= function Component(){
 		 *      
 		 *    radian:     
 		 *    degree: 방향값
-		 **/
-		
+		 **/		
 		const px1=0, py1=0;
 		 let px2=-2, py2=-2;
 		 const PI=Math.PI;

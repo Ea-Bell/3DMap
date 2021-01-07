@@ -20,16 +20,10 @@
 <div id="fullWidth">
 	<%--좌측 영역 --%>
 	<div id="Partitio1"style="float: left; " >
-		<div id="map" style="width: 950px; height: 600px;">
+		<div id="map" style="width: 950px; height: 600px;"></div>		
 		
-		</div>
-		<!-- 실행 함수 -->
-
-		<!-- <script type="module" src="/Frontend/script/KakaoMapComponent.js"></script> -->
-	<!--  	<script type="module" src="/Frontend/script/MultiMarker.js"></script>   -->
-	
-	<script type="text/javascript" src="/Frontend/script/KakaoMapComponent.js"></script>
-		
+		<!-- 실행 함수 -->	
+	<script type="text/javascript" src="/Frontend/script/KakaoMapComponent.js"></script>		
 	</div>
 		
 	<%--우측 영역 --%>
