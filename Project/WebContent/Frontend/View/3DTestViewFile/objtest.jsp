@@ -51,6 +51,8 @@
         webGLRenderer.shadowMapEnabled = true;
 
         // position and point the camera to the center of the scene
+        // 차량의 회전은 z축이 담당한다.
+        
         camera.position.x = 0;
         camera.position.y = 44.452;
         camera.position.z = -184.184;
@@ -58,6 +60,7 @@
         camera.lookAt(scene.position);
         scene.add(camera);
 
+        
         // add spotlight for the shadows
         var spotLight = new THREE.DirectionalLight(0xffffff);
         spotLight.position.set(10, 10, 10);
