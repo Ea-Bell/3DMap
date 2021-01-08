@@ -42,21 +42,26 @@
         var scene = new THREE.Scene();
 
         // create a camera, which defines where we're looking at.
-        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
 
         // create a render and set the size
         var webGLRenderer = new THREE.WebGLRenderer();
         webGLRenderer.setClearColor(new THREE.Color(0xffffff, 1.0));
         webGLRenderer.setSize(window.innerWidth, window.innerHeight);
         webGLRenderer.shadowMapEnabled = true;
-
+		var axes = new THREE.AxisHelper(30);
+		scene.add(axes);
         // position and point the camera to the center of the scene
         // 차량의 회전은 z축이 담당한다.
         
         camera.position.x = 0;
-        camera.position.y = 44.452;
-        camera.position.z = -184.184;
-        camera.rotation.x=-90;
+        camera.position.y = 90;
+        camera.position.z = 0;
+        
+        camera.rotation.x= -90;
+        camera.rotation.y= 0;
+        camera.rotation.z= 0;
+        
         camera.lookAt(scene.position);
         scene.add(camera);
 
@@ -94,12 +99,21 @@
                 child.material = material;
                 child.geometry.computeFaceNormals();
                 child.geometry.computeVertexNormals();
+              
             });
 
             mesh = loadedMesh;
-            loadedMesh.scale.set(0.5, 0.5, 0.5);
-
+            loadedMesh.scale.set(1, 1, 1);
+            
+            loadedMesh.position.x=0;
+            loadedMesh.position.y=0;
+            loadedMesh.position.z=0;
+            
+            
             loadedMesh.rotation.x =0;
+            loadedMesh.rotation.y =(90+0)*(Math.PI/180); //요기에 변환하는 리턴 함수를 만들어서 각도를 변한 할 수 있게 만드시오.
+            console.log(loadedMesh.rotation.y);
+            loadedMesh.rotation.z =0;
             scene.add(loadedMesh);
         });
 
