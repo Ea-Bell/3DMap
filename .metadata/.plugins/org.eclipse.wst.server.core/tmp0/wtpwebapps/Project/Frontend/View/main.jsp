@@ -9,6 +9,11 @@
 
 
 <!-- 자바 스크립트 선언부 -->
+    <script type="text/javascript" src="/Frontend/script/libs/three.js"></script>
+    <script type="text/javascript" src="/Frontend/script/libs/OBJLoader.js"></script>
+    <script type="text/javascript" src="/Frontend/script/libs/stats.js"></script>
+    <script type="text/javascript" src="/Frontend/script/libs/dat.gui.js"></script>
+
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1d0b0cf39992a15bd20a78962f4b44a4"></script>
 <script  src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
@@ -19,8 +24,8 @@
 <body>
 <div id="fullWidth">
 	<%--좌측 영역 --%>
-	<div id="Partitio1"style="float: left; " >
-		<div id="map" style="width: 950px; height: 600px;"></div>		
+	<div id="Partitio1 " >
+		<div id="map" style="width: 100%; height: 775px;"></div>		
 		
 		<!-- 실행 함수 -->	
 	<script type="text/javascript" src="/Frontend/script/KakaoMapComponent.js"></script>		
@@ -39,6 +44,8 @@
 		<input type="text" id="Ytext" >
 	</div>
 <img id="img" src="/Frontend/img/airplane.png" style="display: none; transform:roated(90deg)">
+
+
 </div>
 </body>
 </html>

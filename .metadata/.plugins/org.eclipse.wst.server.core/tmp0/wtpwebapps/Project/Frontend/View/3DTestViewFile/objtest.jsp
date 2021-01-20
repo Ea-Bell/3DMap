@@ -7,8 +7,6 @@
     <title>Example 08.06 - Load OBJ model </title>
     <script type="text/javascript" src="/Frontend/script/libs/three.js"></script>
     <script type="text/javascript" src="/Frontend/script/libs/OBJLoader.js"></script>
-
-
     <script type="text/javascript" src="/Frontend/script/libs/stats.js"></script>
     <script type="text/javascript" src="/Frontend/script/libs/dat.gui.js"></script>
     <style>
@@ -16,6 +14,7 @@
             /* set margin to 0 and overflow to hidden, to go fullscreen */
             margin: 0;
             overflow: hidden;
+            background-color: yellow;
         }
     </style>
 </head>
@@ -38,7 +37,7 @@
 
         var stats = initStats();
 
-        // create a scene, that will hold all our elements such as objects, cameras and lights.
+        // create a scene, that will hold all our elements                        such as objects, cameras and lights.
         var scene = new THREE.Scene();
 
         // create a camera, which defines where we're looking at.
@@ -46,11 +45,10 @@
 
         // create a render and set the size
         var webGLRenderer = new THREE.WebGLRenderer();
-        webGLRenderer.setClearColor(new THREE.Color(0xffffff, 1.0));
-        webGLRenderer.setSize(window.innerWidth, window.innerHeight);
-        webGLRenderer.shadowMapEnabled = true;
-		var axes = new THREE.AxisHelper(30);
-		scene.add(axes);
+        webGLRenderer.setClearColor(0xffffff,1.0);
+        webGLRenderer.setSize(350,350);
+        webGLRenderer.shadowMapEnabled = false;
+
         // position and point the camera to the center of the scene
         // 차량의 회전은 z축이 담당한다.
         
@@ -111,10 +109,10 @@
             
             
             loadedMesh.rotation.x =0;
-            loadedMesh.rotation.y =(90+0)*(Math.PI/180); //요기에 변환하는 리턴 함수를 만들어서 각도를 변한 할 수 있게 만드시오.
+            loadedMesh.rotation.y =(90+0)*(Math.PI/180);//요기에 변환하는 리턴 함수를 만들어서 각도를 변한 할 수 있게 만드시오.
             console.log(loadedMesh.rotation.y);
             loadedMesh.rotation.z =0;
-            scene.add(loadedMesh);
+            scene.add(mesh);
         });
 
         render()
@@ -145,7 +143,7 @@
             stats.domElement.style.left = '0px';
             stats.domElement.style.top = '0px';
 
-            document.getElementById("Stats-output").appendChild(stats.domElement);
+            /* document.getElementById("Stats-output").appendChild(stats.domElement); */
 
             return stats;
         } 

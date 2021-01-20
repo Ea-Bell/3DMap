@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+
+  <!-- css 선언부 -->
+
+
+<!-- 자바 스크립트 선언부 -->
+    <script type="text/javascript" src="/Frontend/script/libs/three.js"></script>
+    <script type="text/javascript" src="/Frontend/script/libs/OBJLoader.js"></script>
+    <script type="text/javascript" src="/Frontend/script/libs/stats.js"></script>
+    <script type="text/javascript" src="/Frontend/script/libs/dat.gui.js"></script>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1d0b0cf39992a15bd20a78962f4b44a4"></script>
+<script  src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
+<script type="text/javascript" src ="/Frontend/script/ReadExcel.js" charset="utf-8"></script>
+
+<title>차량 주행 데이터 시각화 시키기</title>
+</head>
+<body>
+<div id="fullWidth">
+	<%--좌측 영역 --%>
+	<div id="Partitio1 " >
+		<div id="map" style="width: 1250px; height: 600px;"></div>		
+		
+		<!-- 실행 함수 -->	
+	<script type="text/javascript" src="/Frontend/script/KakaoMapComponent.js"></script>		
+	</div>
+		
+	<%--우측 영역 --%>
+	<div id="Partition2" style="background-color: background; float: left; ">
+		<input type ="file" onchange="readExcel()"><br/><br/>
+	
+		<label id="X_label">X좌표값
+		</label>
+		<input type="text" id="Xtext" value=" " >
+	
+		<label id ="Y_label">Y좌표값
+		</label>
+		<input type="text" id="Ytext" >
+	</div>
+<img id="img" src="/Frontend/img/airplane.png" style="display: none; transform:roated(90deg)">
+</div>
+</body>
+</html>

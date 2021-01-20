@@ -1,0 +1,15 @@
+172.30.1.254 - - [11/Jan/2021:20:19:34 +0900] "GET / HTTP/1.1" 404 750
+172.30.1.254 - - [11/Jan/2021:20:19:35 +0900] "GET /Frontend/View/main.jsp HTTP/1.1" 200 1276
+172.30.1.254 - - [11/Jan/2021:20:19:35 +0900] "GET /Frontend/script/KakaoMapComponent.js HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:19:35 +0900] "GET /Frontend/script/ReadExcel.js HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:19:35 +0900] "GET /Frontend/img/airplane.png HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:19:36 +0900] "GET /favicon.ico HTTP/1.1" 404 761
+172.30.1.254 - - [11/Jan/2021:20:20:00 +0900] "GET /Frontend/View/3DTestViewFile/objtest.jsp HTTP/1.1" 200 5019
+172.30.1.254 - - [11/Jan/2021:20:20:00 +0900] "GET /Frontend/script/libs/OBJLoader.js HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:20:00 +0900] "GET /Frontend/script/libs/dat.gui.js HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:20:00 +0900] "GET /Frontend/script/libs/stats.js HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:20:00 +0900] "GET /Frontend/script/libs/three.js HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:20:01 +0900] "GET /Frontend/3DObj/carmodeltest.obj HTTP/1.1" 304 -
+172.30.1.254 - - [11/Jan/2021:20:20:13 +0900] "GET /Frontend/View/3DTestViewFile/objtest.jsp HTTP/1.1" 200 5017
+172.30.1.254 - - [11/Jan/2021:20:20:47 +0900] "GET /Frontend/View/3DTestViewFile/objtest.jsp HTTP/1.1" 200 4986
+172.30.1.254 - - [11/Jan/2021:20:21:09 +0900] "GET /Frontend/View/3DTestViewFile/objtest.jsp HTTP/1.1" 200 5017
